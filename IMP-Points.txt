@@ -1,0 +1,7 @@
+
+* transitionend 
+
+The transitionend event in JavaScript is used to detect when a 
+CSS transition on an element has completed. You can attach an 
+event listener for this event using the addEventListener() method.
+

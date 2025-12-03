@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aria-controls</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <h1>aria-controls</h1>
+    <button aria-expanded="false" aria-controls="menu-1">Menu</button>
+    <ul id="menu-1">
+      <li>item 1</li>
+      <li>item 2</li>
+    </ul> -->
+
+    <h1>aria-owns</h1>
+    <button aria-owns="menu1" aria-expanded="true">Menu</button>
+    <main>
+      <!-- an entire page worth of content --->
+    </main>
+    <ul id="menu1">
+      <li>menuList 1</li>
+      <li>menuList 2</li>
+    </ul>
+    <script src="script.js"></script>
+  </body>
+</html>

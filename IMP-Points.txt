@@ -10,3 +10,13 @@ PROJECT : Planet TabList
 aria-labelledby:
 The aria-labelledby attribute is needed here to associate the tablist with a visible label, helping assistive technologies like screen readers announce the purpose of the tablist to users.
 
+aria-controls:
+There needs to be a way to connect the buttons to the content they represent. This is done by using the aria-controls attribute on each button.
+
+aria-selected
+When a user selects a tab, the aria-selected attribute should be updated to "true" for that tab and "false" for all others. This indicates which tab is currently active and ensures accessibility for assistive technologies.
+
+
+[role="tab"] is an attribute selector that targets elements where the role attribute equals "tab".
+The result is a NodeList, which behaves like an array.
+

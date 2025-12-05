@@ -1,0 +1,21 @@
+In this workshop, you will practice working with the aria-live and aria-label attributes by building an accessible note taking app.
+
+:contenteditable
+To make that div element editable, you can use the contenteditable attribute like this:
+Example Code <div contenteditable="true"></div>
+
+:aria-live
+aria-live attribute which is used to create a live region on a page. This will allow screen reader users to be automatically notified when the content of the live region changes, without needing to manually focus on or interact with it.
+
+:polite
+The polite value will tell screen readers to wait until any current announcement is finished or until the user stops typing before announcing the update.
+
+:blur event
+blur event. This event fires when an element loses focus. Here is an example:
+Example Code
+element.addEventListener("blur", () => {
+// do something here
+});
+
+:focus
+The desired behavior is for the message to disappear when the user focuses on the element. You can use the focus event for this.

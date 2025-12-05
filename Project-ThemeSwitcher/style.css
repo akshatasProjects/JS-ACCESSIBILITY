@@ -1,0 +1,44 @@
+/* file: styles.css */
+body {
+  font-family: sans-serif;
+  transition: background-color 0.3s ease;
+  padding: 2rem;
+}
+
+#theme-dropdown {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+  width: 200px;
+  background: #fff;
+}
+
+#theme-dropdown li {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+#theme-dropdown li:hover {
+  background-color: #eee;
+}
+
+.theme-ocean {
+  background-color: #0077be;
+  color: #ffffff;
+}
+
+.theme-desert {
+  background-color: #edc9af;
+  color: #5c3a21;
+}
+
+.theme-midnight {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+#theme-message {
+  margin-top: 1rem;
+  font-weight: bold;
+}

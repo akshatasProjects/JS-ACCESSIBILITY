@@ -14,15 +14,18 @@
       aria-controls="theme-dropdown">
       Switch Theme
     </button>
+
     <ul
       id="theme-dropdown"
       role="menu"
       aria-labelledby="theme-switcher-button"
       hidden>
-      <li role="menu-item" id="theme-ocean" aria-live="polite">Ocean</li>
-      <li role="menu-item" id="theme-desert" aria-live="polite">Desert</li>
-      <li role="menu-item" id="theme-midnight" aria-live="polite">Midnight</li>
+      <li role="menuitem" id="theme-light">Light</li>
+      <li role="menuitem" id="theme-dark">Dark</li>
     </ul>
+
+    <div aria-live="polite" id="live-region"></div>
+
     <script src="script.js"></script>
   </body>
 </html>

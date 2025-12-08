@@ -1,35 +1,33 @@
-/* file: script.js */
 const themeButton = document.getElementById("theme-switcher-button");
 const themeDropdown = document.getElementById("theme-dropdown");
-const themeMessage = document.getElementById("theme-message");
+const liveRegion = document.getElementById("live-region");
 
 const themes = [
-  { name: "theme-ocean", message: "Dive into the calm of the Ocean 🌊" },
-  { name: "theme-desert", message: "Feel the warmth of the Desert ☀️" },
-  { name: "theme-midnight", message: "Embrace the mystery of Midnight 🌌" },
+  { name: "light", message: "Light theme activated 🌞" },
+  { name: "dark", message: "Dark theme activated 🌙" },
 ];
 
 themeButton.addEventListener("click", () => {
   const isExpanded = themeButton.getAttribute("aria-expanded") === "true";
+
   themeButton.setAttribute("aria-expanded", String(!isExpanded));
   themeDropdown.hidden = isExpanded;
 });
 
 themeDropdown.addEventListener("click", (e) => {
-  if (e.target && e.target.matches("li[role='menu-item']")) {
-    const selectedId = e.target.id; // e.g., "theme-ocean"
-    const themeName = selectedId.replace("theme-", ""); // e.g., "ocean"
+  if (e.target && e.target.matches('li[role="menuitem"]')) {
+    const selectedTheme = e.target.id.replace("theme-", ""); // "light" or "dark"
 
-    // Apply theme class to <body>
-    document.body.className = `theme-${themeName}`;
+    // Add theme class to body
+    document.body.className = `theme-${selectedTheme}`;
 
-    // Display theme message
-    const themeObj = themes.find((t) => t.name === themeName);
-    if (themeObj && themeObj.message) {
-      themeMessage.textContent = themeObj.message;
+    // Find the theme message from array
+    const themeObj = themes.find((t) => t.name === selectedTheme);
+    if (themeObj) {
+      liveRegion.textContent = themeObj.message;
     }
 
-    // Close dropdown and update aria-expanded
+    // Close dropdown
     themeDropdown.hidden = true;
     themeButton.setAttribute("aria-expanded", "false");
   }
